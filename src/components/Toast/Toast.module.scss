@@ -1,0 +1,15 @@
+.toast{
+    position: fixed;
+    top: 26px;
+    right: 12px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    h5{
+        color: red;
+        margin: 0;
+        margin-right: 16px;
+    }
+}

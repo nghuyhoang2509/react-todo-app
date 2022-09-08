@@ -40,6 +40,13 @@
         }
     }
     .project{
+        padding: 32px;
+        .todos{
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            
+        }
     }
 }
 

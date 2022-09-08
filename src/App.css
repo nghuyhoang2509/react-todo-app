@@ -1,8 +1,11 @@
-.pointer{
-    cursor: pointer;
+.pointer {
+  cursor: pointer;
 }
 
-*{
-    user-select: none;
+* {
+  user-select: none;
 }
 
+.app{
+  position: relative;
+}

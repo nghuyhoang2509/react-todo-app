@@ -3,20 +3,15 @@ import styles from "./Login.module.scss";
 import classNames from "classnames/bind";
 
 import { auth } from "../../firebase/config";
-import { FacebookAuthProvider, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
+import { GoogleAuthProvider, signInWithRedirect } from "firebase/auth";
 
 const cx = classNames.bind(styles);
 
-const fbProvider = new FacebookAuthProvider();
 const ggProvider = new GoogleAuthProvider();
 
-function Login(props) {
-  const handleLoginFb= ()=>{
-    console.log('haha')
-    signInWithPopup(auth,fbProvider)
-  }
+function Login() {
   const handleLoginGg= ()=>{
-    signInWithPopup(auth,ggProvider)
+    signInWithRedirect(auth,ggProvider)
   }
 
 
@@ -42,18 +37,11 @@ function Login(props) {
                 src="https://img.icons8.com/color/36/000000/google-logo.png"
               />
             </button>
-            <button className="d-block mt-2 mb-2 btn btn-outline-primary w-100">
-              Login with Facebook
-              <img
-                alt=" "
-                onClick={handleLoginFb}
-                className="ms-2"
-                src="https://img.icons8.com/color/36/000000/facebook-new.png"
-              />
-            </button>
+            
           </div>
         </div>
-        <div className={`col d-none d-md-block ${cx("slide")}`}></div>
+        <div className={`col d-none d-md-flex ${cx("slide")}`}>
+        </div>
       </div>
     </div>
   );

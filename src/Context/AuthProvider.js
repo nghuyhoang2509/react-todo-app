@@ -13,10 +13,9 @@ export default function AuthProvider({ children }) {
   useEffect(() => {
     const unsub = auth.onAuthStateChanged((user) => {
       if (user) {
-        const { displayName, photoUrl } = user;
+        const { email } = user;
         setUser({
-          displayName,
-          photoUrl,
+          email,
         });
         setloading(false);
         navigate("/");
