@@ -10,10 +10,9 @@ const cx = classNames.bind(styles);
 const ggProvider = new GoogleAuthProvider();
 
 function Login() {
-  const handleLoginGg= ()=>{
-    signInWithRedirect(auth,ggProvider)
-  }
-
+  const handleLoginGg = () => {
+    signInWithRedirect(auth, ggProvider);
+  };
 
   return (
     <div className="container-fluid vh-100">
@@ -28,19 +27,22 @@ function Login() {
             <p className={cx("description")}>
               Welcome to Todo App, please login to start using the app{" "}
             </p>
-            <button className="d-block mt-2 mb-2 btn btn-outline-danger w-100">
+            <button
+              className="d-block mt-2 mb-2 btn btn-outline-danger w-100"
+              onClick={handleLoginGg}
+            >
               Login with Google
               <img
                 alt=" "
                 className="ms-2"
-                onClick={handleLoginGg}
                 src="https://img.icons8.com/color/36/000000/google-logo.png"
               />
             </button>
-            
           </div>
         </div>
         <div className={`col d-none d-md-flex ${cx("slide")}`}>
+          <span>
+          </span>
         </div>
       </div>
     </div>
